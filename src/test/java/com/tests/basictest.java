@@ -20,4 +20,11 @@ public class basictest extends BaseClass
 	System.out.println("Testing2");
 	}
 	
+	@Test
+	public void thirdtest()
+	{
+	System.out.println("Testing");
+	System.out.println("Testing2");
+	}
+	
 }
