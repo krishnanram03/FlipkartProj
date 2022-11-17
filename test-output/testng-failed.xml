@@ -5,7 +5,6 @@
     <classes>
       <class name="com.tests.basictest">
         <methods>
-          <include name="tearDown"/>
           <include name="firstest"/>
           <include name="setup"/>
         </methods>

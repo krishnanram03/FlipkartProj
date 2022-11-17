@@ -3,28 +3,23 @@ package com.tests;
 import org.testng.annotations.Test;
 
 import com.base.BaseClass;
+import com.pageObjects.HomePageObj;
 
 public class basictest extends BaseClass
 {
+	HomePageObj hpage= new HomePageObj(driver);
+	@Test
+	public void firstest() throws Exception
 
-	@Test
-	public void firstest()
 	{
-	System.out.println("Testing");
+		//hpage= new HomePageObj(driver);
+		Thread.sleep(5000);
+		hpage.popupclose().click();
+		hpage.searchbox().sendKeys("Iphone X");
+		hpage.searchBtn().click();
+
 	}
-	
-	@Test
-	public void secondtest()
-	{
-	System.out.println("Testing");
-	System.out.println("Testing2");
-	}
-	
-	@Test
-	public void thirdtest()
-	{
-	System.out.println("Testing");
-	System.out.println("Testing2");
-	}
-	
+
+
+
 }

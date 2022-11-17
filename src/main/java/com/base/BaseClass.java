@@ -84,12 +84,12 @@ public class BaseClass {
 		driver.get(prop.getProperty("URL"));		
 	}
 	
-	@AfterTest
+	/*@AfterTest
 	public void tearDown()
 	{
 		
 		driver.close();
 			
-	}
+	}*/
 
 }
