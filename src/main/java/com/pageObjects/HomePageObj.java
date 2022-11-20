@@ -11,13 +11,13 @@ public class HomePageObj
 	public HomePageObj(WebDriver driver)
 	{
 		this.driver = driver;
-		  PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver,this);
 	}
 	
 	
 	public WebElement searchbox()
 	{
-		return searchbox;
+		return searchBtn;
 		
 	}
 	
