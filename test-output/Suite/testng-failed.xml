@@ -5,8 +5,8 @@
     <classes>
       <class name="com.tests.basictest">
         <methods>
-          <include name="firstest"/>
           <include name="setup"/>
+          <include name="firstest"/>
         </methods>
       </class> <!-- com.tests.basictest -->
     </classes>

@@ -4,45 +4,50 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class HomePageObj 
+import com.utitility.AbstractComponents;
+
+public class HomePageObj extends AbstractComponents 
 {
 
 	public WebDriver driver;
 	public HomePageObj(WebDriver driver)
 	{
+		super(driver);
 		this.driver = driver;
 		PageFactory.initElements(driver,this);
 	}
 	
 	
-	public WebElement searchbox()
-	{
-		return searchBtn;
-		
-	}
-	
-	
-	public WebElement searchBtn()
-	{
-		return searchBtn;
-		
-	}
-	
 
-	public WebElement popupclose()
-	{
-		return popupclose;
-		
-	}
 	
 	@FindBy(css=".L0Z3Pu")
 	WebElement searchBtn;
 	
 	
 	@FindBy(xpath="//input[@name='q']")
-	WebElement searchbox;
+	WebElement searchbBox;
 	
 	@FindBy(xpath="//div[@class='_2QfC02']/button")
-	WebElement popupclose; 
+	WebElement popupClose; 
+	
+	public void searchbox(String text)
+	{
+		type(searchbBox,text);
+		
+	}
+	
+	
+	public void searchBtn()
+	{
+		click(searchBtn);
+		
+	}
+	
+
+	public void popupclose()
+	{
+		click(popupClose);
+		
+	}
 	
 }

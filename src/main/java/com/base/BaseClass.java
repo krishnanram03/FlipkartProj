@@ -2,6 +2,7 @@ package com.base;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.Collections;
 import java.util.Properties;
 import org.openqa.selenium.WebDriver;
@@ -34,6 +35,7 @@ public class BaseClass {
 			cOptions.setExperimentalOption("excludeSwitches",Collections.singletonList("enable-automation"));
 			driver = new ChromeDriver(cOptions);
 			driver.manage().window().maximize();
+
 			driver.manage().deleteAllCookies();
 		}
 		else if(prop.getProperty("browser").equalsIgnoreCase("chrome") && prop.getProperty("executiontype").equalsIgnoreCase("headless"))
@@ -42,6 +44,7 @@ public class BaseClass {
 			cOptions.setHeadless(true);
 			driver = new ChromeDriver(cOptions);
 			driver.manage().deleteAllCookies();
+			
 		}
 		 /*else if(prop.getProperty("browser").equalsIgnoreCase("firefox") && prop.getProperty("executiontype").equalsIgnoreCase("headed"))
 		{
@@ -67,6 +70,7 @@ public class BaseClass {
 			eOptions.setExperimentalOption("excludeSwitches",Collections.singletonList("enable-automation"));
 			driver = new EdgeDriver(eOptions);
 			driver.manage().window().maximize();
+			
 			driver.manage().deleteAllCookies();
 		}
 		else if(prop.getProperty("browser").equalsIgnoreCase("edge") && prop.getProperty("executiontype").equalsIgnoreCase("headless"))
@@ -74,12 +78,14 @@ public class BaseClass {
 			eOptions = new EdgeOptions();
 			eOptions.setHeadless(true);
 			driver = new EdgeDriver(eOptions);
+			
 			driver.manage().deleteAllCookies();
 		}
 		else
 		{
 			System.out.println("Kindly opt. a valid execution option");
 		}
+		
 		driver.get(prop.getProperty("URL"));		
 	}
 	

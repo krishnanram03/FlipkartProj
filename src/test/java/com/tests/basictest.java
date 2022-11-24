@@ -12,11 +12,11 @@ public class basictest extends BaseClass
 	public void firstest() throws Exception
 
 	{
+		
 		hpage= new HomePageObj(driver);
-		Thread.sleep(5000);
-		hpage.popupclose().click();
-		hpage.searchbox().sendKeys("Iphone X");
-		hpage.searchBtn().click();
+		hpage.popupclose();
+		hpage.searchbox("Iphone X");
+		hpage.searchBtn();
 
 	}
 
